@@ -1,0 +1,6 @@
+cpp/build
+kotlin/target
+*~
+\#*
+**/.idea
+**/*.iml
