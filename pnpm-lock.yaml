@@ -8,11 +8,23 @@ importers:
 
   .:
     devDependencies:
+      '@tsconfig/node-lts':
+        specifier: ^22.0.2
+        version: 22.0.2
+      '@tsconfig/node-ts':
+        specifier: ^23.6.1
+        version: 23.6.1
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
 
 packages:
+
+  '@tsconfig/node-lts@22.0.2':
+    resolution: {integrity: sha512-Kgq5yXTvnUnvlhob0xJpOH4na9PWtuFhHSf94MpDwnENWgiFeJKDNANQV2MT1WpXZYkK2WSWfVYKhVkR7bc8TA==}
+
+  '@tsconfig/node-ts@23.6.1':
+    resolution: {integrity: sha512-1E5cUp+S65pLKKI9VrGMQPWDHxOEq3dAGM2onG3fLeSRwWbylYFwhIjnzJikjSN7w2nCgwxmv8ifvUKDFkK38Q==}
 
   typescript@5.8.3:
     resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
@@ -20,5 +32,9 @@ packages:
     hasBin: true
 
 snapshots:
+
+  '@tsconfig/node-lts@22.0.2': {}
+
+  '@tsconfig/node-ts@23.6.1': {}
 
   typescript@5.8.3: {}
