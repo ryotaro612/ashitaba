@@ -5,6 +5,7 @@
   "scripts": {
     "test:run": "vitest --run",
     "test:watch": "vitest",
+    "fix": "biome format --write --unsafe && biome lint --fix --unsafe",
     "build": "esbuild --bundle src/index.ts --format=esm --outfile=bin/cli.js --minify --platform=node  --sourcemap"
   },
   "keywords": [],
