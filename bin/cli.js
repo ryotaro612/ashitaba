@@ -1,3 +1,3 @@
-#!/usr/bin/env node
-console.log("Hello, world!");
+#!/usr/bin/env -S node --enable-source-maps
+import{argv as l}from"process";import{existsSync as c,readFileSync as d}from"node:fs";import{parseArgs as I,parseEnv as m}from"node:util";function p(e){let t=I({args:e,options:{port:{type:"string",short:"p",default:"36332"},env:{type:"string",short:"e",default:".env"},help:{type:"boolean",short:"h",default:!1}}}),o=t.values.env,n={};c(o)&&(n=f(o));let r=null,i=process.env.ASHITABA_OIDC_CLIENT_ID??n.ASHITABA_OIDC_CLIENT_ID;i||(r="Environment variable ASHITABA_OIDC_CLIENT_ID must be defined.");let a=process.env.ASHITABA_OIDC_CLIENT_SECRET??n.ASHITABA_OIDC_CLIENT_SECRET;return a||(r="Environment variable ASHITABA_OIDC_CLIENT_SECRET must be defined."),{port:parseInt(t.values.port),oidcClientId:i??"",clientSecret:a??"",error:r,help:t.values.help}}function f(e){let s=d(e);return m(s.toString())}console.log(l);p(l.slice(2));run();
 //# sourceMappingURL=cli.js.map
