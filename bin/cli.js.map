@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts"],
+  "sourcesContent": ["#!/usr/bin/env node\nconsole.log('Hello, world!')"],
+  "mappings": ";AACA,QAAQ,IAAI,eAAe",
+  "names": []
+}

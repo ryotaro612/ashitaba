@@ -2,18 +2,24 @@
   "name": "ashitaba",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild --bundle src/index.ts --format=esm --outfile=bin/cli.js --minify --platform=node  --sourcemap"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ryotaro Nakamura",
   "license": "ISC",
   "packageManager": "pnpm@10.12.4",
   "type": "module",
   "devDependencies": {
     "@tsconfig/node-lts": "^22.0.2",
     "@tsconfig/node-ts": "^23.6.1",
-    "typescript": "^5.8.3"
+    "@types/node": "^24.0.15",
+    "esbuild": "0.25.8",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0"
   }
 }
