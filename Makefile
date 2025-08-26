@@ -1,6 +1,16 @@
 ##@ Build
-build/webview/.git/HEAD:
-	git clone --depth=1 --branch=0.12.0 git@github.com:webview/webview.git
+build/webview_src/.git/HEAD:
+	mkdir -p build && \
+	cd build && \
+	git clone --depth=1 --branch=0.12.0 git@github.com:webview/webview.git webview_src
+
+build/webview/include/webview/webview.h: build/webview_src/.git/HEAD
+	cd build/webview_src && \
+	rm -rf build && \
+	cmake -G Ninja -B build -S . -D CMAKE_INSTALL_PREFIX=../webview -D CMAKE_BUILD_TYPE=Release -D WEBVIEW_BUILD_DOCS=off && \
+	cd build/webview_src/build && \
+	ninja install
+
 
 ##@ Test
 test: ## Run tests.
