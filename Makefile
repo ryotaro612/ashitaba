@@ -8,9 +8,8 @@ build/webview/include/webview/webview.h: build/webview_src/.git/HEAD
 	cd build/webview_src && \
 	rm -rf build && \
 	cmake -G Ninja -B build -S . -D CMAKE_INSTALL_PREFIX=../webview -D CMAKE_BUILD_TYPE=Release -D WEBVIEW_BUILD_DOCS=off && \
-	cd build/webview_src/build && \
+	cd build && \
 	ninja install
-
 
 ##@ Test
 test: ## Run tests.
@@ -28,3 +27,6 @@ help: ## Display this help.
 .DEFAULT_GOAL := help
 
 .PHONY: test clean help
+
+
+## g++  -std=c++17 -Wall -Wextra  main.c $(PKG_CONFIG_PATH="." pkg-config --cflags --libs webview )
